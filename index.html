@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wealth Bridge Global</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
   --green: #336b37;
@@ -23,15 +23,14 @@
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Jost', sans-serif;
 }
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { font-family: var(--font-sans); color: var(--text); background: #fff; overflow-x: hidden; }
 img { display: block; max-width: 100%; }
 a { text-decoration: none; color: inherit; }
 button { cursor: pointer; border: none; background: none; font-family: var(--font-sans); }
-
-/* ===================== NAV ===================== */
+ 
+/* NAV */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
   background: rgba(255,255,255,0.97);
@@ -42,7 +41,7 @@ nav {
   transition: box-shadow 0.3s;
 }
 nav.scrolled { box-shadow: 0 2px 20px rgba(51,107,55,0.1); }
-.nav-logo { display: flex; align-items: center; gap: 10px; }
+.nav-logo { display: flex; align-items: center; }
 .nav-logo img { height: 44px; width: auto; }
 .nav-links { display: flex; align-items: center; gap: 36px; }
 .nav-links a {
@@ -59,33 +58,29 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(51,107,55,0.1); }
 .nav-links a:hover::after { transform: scaleX(1); }
 .nav-links a.active { color: var(--green); }
 .nav-links a.active::after { transform: scaleX(1); }
-
-/* ===================== PAGES ===================== */
+ 
+/* PAGES */
 .page { display: none; }
 .page.active { display: block; }
-
-/* ===================== HOME ===================== */
-
+ 
 /* HERO */
 .hero {
   height: 100vh; min-height: 650px;
   position: relative; display: flex; align-items: center;
-  overflow: hidden; background: var(--green-dark);
+  overflow: hidden;
 }
 .hero-bg-img {
   position: absolute; inset: 0;
-  background-image: url('https://wealthbridgeglobal.org/media/ja-socal-907x783.webp');
-  background-size: cover; background-position: center;
-  opacity: 0.22; filter: grayscale(30%);
+  background-image: url('hero.png');
+  background-size: cover; background-position: center top;
 }
 .hero-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(105deg, rgba(35,74,38,0.97) 45%, rgba(51,107,55,0.6) 100%);
+  background: linear-gradient(105deg, rgba(35,74,38,0.88) 40%, rgba(51,107,55,0.5) 100%);
 }
 .hero-content {
   position: relative; z-index: 2;
-  padding: 0 56px 0 88px;
-  max-width: 720px;
+  padding: 0 56px 0 88px; max-width: 720px;
   animation: fadeUp 0.9s ease both;
 }
 @keyframes fadeUp {
@@ -106,7 +101,7 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(51,107,55,0.1); }
 .hero-title em { font-style: italic; color: var(--gold-light); }
 .hero-body {
   font-size: 16px; font-weight: 300; line-height: 1.85;
-  color: rgba(255,255,255,0.72); max-width: 520px; margin-bottom: 44px;
+  color: rgba(255,255,255,0.82); max-width: 520px; margin-bottom: 44px;
 }
 .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
 .btn-solid {
@@ -123,7 +118,6 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(51,107,55,0.1); }
   border-radius: 1px; transition: all 0.2s;
 }
 .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.07); }
-
 .hero-scroll {
   position: absolute; bottom: 36px; left: 88px;
   display: flex; align-items: center; gap: 10px;
@@ -131,7 +125,7 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(51,107,55,0.1); }
   color: rgba(255,255,255,0.4); z-index: 2;
 }
 .hero-scroll-line { width: 40px; height: 1px; background: rgba(255,255,255,0.3); }
-
+ 
 /* STATS */
 .stats-row {
   background: var(--green);
@@ -151,11 +145,8 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(51,107,55,0.1); }
   font-size: 10px; font-weight: 500; letter-spacing: 3px;
   text-transform: uppercase; color: rgba(255,255,255,0.75);
 }
-.stat-sub {
-  font-size: 11px; color: rgba(255,255,255,0.4);
-  margin-top: 4px; font-weight: 300;
-}
-
+.stat-sub { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 4px; font-weight: 300; }
+ 
 /* MISSION */
 .mission-section { padding: 100px 88px; display: grid; grid-template-columns: 1fr 1fr; gap: 88px; align-items: center; }
 .mission-images { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 300px 200px; gap: 10px; }
@@ -163,7 +154,6 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(51,107,55,0.1); }
 .mission-img-tall img { width: 100%; height: 100%; object-fit: cover; }
 .mission-img-sm { border-radius: 2px; overflow: hidden; }
 .mission-img-sm img { width: 100%; height: 100%; object-fit: cover; }
-.mission-text {}
 .eyebrow {
   font-size: 10px; font-weight: 600; letter-spacing: 4px;
   text-transform: uppercase; color: var(--green);
@@ -176,10 +166,7 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(51,107,55,0.1); }
   color: var(--green-dark); margin-bottom: 28px;
 }
 .section-heading em { font-style: italic; }
-.section-body {
-  font-size: 15px; font-weight: 300; line-height: 1.9;
-  color: var(--text-mid);
-}
+.section-body { font-size: 15px; font-weight: 300; line-height: 1.9; color: var(--text-mid); }
 .section-body p { margin-bottom: 16px; }
 .section-body p:last-child { margin-bottom: 0; }
 .text-link {
@@ -190,8 +177,8 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(51,107,55,0.1); }
   transition: color 0.2s, gap 0.2s;
 }
 .text-link:hover { color: var(--green-dark); gap: 14px; }
-
-/* FEATURED CARDS */
+ 
+/* CARDS */
 .cards-section { background: var(--off-white); padding: 88px; }
 .cards-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 52px; }
 .cards-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 20px; }
@@ -204,15 +191,13 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(51,107,55,0.1); }
 .card-img { overflow: hidden; }
 .card-img img { width: 100%; object-fit: cover; transition: transform 0.4s; }
 .card:hover .card-img img { transform: scale(1.04); }
-.card:first-child .card-img { height: 260px; }
-.card:not(:first-child) .card-img { height: 190px; }
 .card-body { padding: 24px; }
 .card-tag { font-size: 9px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
 .card-title { font-family: var(--font-serif); font-size: 20px; font-weight: 400; color: var(--green-dark); line-height: 1.3; margin-bottom: 10px; }
 .card:first-child .card-title { font-size: 24px; }
 .card-text { font-size: 13px; font-weight: 300; color: var(--text-light); line-height: 1.75; margin-bottom: 18px; }
 .card-link { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--green); border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
-
+ 
 /* PROGRAMS */
 .programs-section { padding: 100px 88px; display: grid; grid-template-columns: 1fr 1fr; gap: 88px; align-items: start; }
 .programs-img-stack { position: relative; }
@@ -224,21 +209,27 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(51,107,55,0.1); }
   border: 6px solid #fff; box-shadow: 0 8px 32px rgba(0,0,0,0.12);
 }
 .programs-img-accent img { width: 100%; height: 100%; object-fit: cover; }
-.programs-list { padding-top: 8px; }
 .program-item { padding: 24px 0; border-bottom: 1px solid var(--border); }
 .program-item:first-child { padding-top: 0; }
 .program-num { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 6px; }
 .program-name { font-family: var(--font-serif); font-size: 20px; color: var(--green-dark); margin-bottom: 6px; }
 .program-desc { font-size: 13px; font-weight: 300; color: var(--text-light); line-height: 1.75; }
-
-/* QUOTE BANNER */
+ 
+/* PARTNERS LOGOS */
+.partners-logos-section { padding: 72px 88px; background: var(--green-pale); }
+.logos-row { display: flex; align-items: center; justify-content: center; gap: 80px; margin-top: 40px; flex-wrap: wrap; }
+.logo-item { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.logo-item img { height: 80px; width: auto; object-fit: contain; filter: none; transition: transform 0.2s; }
+.logo-item:hover img { transform: scale(1.05); }
+.logo-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-light); font-weight: 500; }
+ 
+/* QUOTE */
 .quote-banner {
   background: var(--green-dark); padding: 80px 88px;
   display: flex; align-items: center; gap: 80px;
 }
 .quote-text {
-  flex: 1;
-  font-family: var(--font-serif);
+  flex: 1; font-family: var(--font-serif);
   font-size: 36px; font-weight: 300; font-style: italic;
   color: #fff; line-height: 1.4;
 }
@@ -246,7 +237,7 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(51,107,55,0.1); }
 .quote-attr { flex-shrink: 0; text-align: right; }
 .quote-name { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.6); }
 .quote-source { font-size: 11px; color: rgba(255,255,255,0.35); margin-top: 6px; }
-
+ 
 /* EXPANSION */
 .expansion-section {
   padding: 100px 88px;
@@ -254,44 +245,39 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(51,107,55,0.1); }
   background: var(--green-pale);
 }
 .expansion-number {
-  font-family: var(--font-serif);
-  font-size: 140px; font-weight: 300;
-  color: var(--green); opacity: 0.18; line-height: 1;
-  text-align: center;
+  font-family: var(--font-serif); font-size: 140px; font-weight: 300;
+  color: var(--green); opacity: 0.18; line-height: 1; text-align: center;
 }
-.expansion-content {}
 .expansion-items { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; }
-.expansion-item {
-  background: #fff; border-radius: 2px; padding: 24px;
-  border: 1px solid var(--border);
-}
+.expansion-item { background: #fff; border-radius: 2px; padding: 24px; border: 1px solid var(--border); }
 .expansion-item-num { font-family: var(--font-serif); font-size: 36px; color: var(--gold); font-weight: 300; margin-bottom: 8px; }
 .expansion-item-text { font-size: 13px; font-weight: 400; color: var(--text-mid); line-height: 1.6; }
-
-/* ===================== ABOUT ===================== */
+ 
+/* PAGE BANNER */
 .page-banner {
   background: var(--green); padding: 130px 88px 80px;
   position: relative; overflow: hidden;
 }
-.page-banner::after {
-  content: '';
-  position: absolute; bottom: 0; left: 0; right: 0; height: 1px;
-  background: rgba(255,255,255,0.15);
-}
 .page-banner-decor {
   position: absolute; right: 88px; top: 50%; transform: translateY(-50%);
   font-family: var(--font-serif); font-size: 200px; font-weight: 700;
-  color: rgba(255,255,255,0.04); letter-spacing: -8px; user-select: none;
-  white-space: nowrap;
+  color: rgba(255,255,255,0.04); letter-spacing: -8px; user-select: none; white-space: nowrap;
 }
 .page-banner-eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold-light); margin-bottom: 20px; }
 .page-banner-title { font-family: var(--font-serif); font-size: 60px; font-weight: 300; color: #fff; line-height: 1.1; max-width: 640px; }
 .page-banner-title em { font-style: italic; }
-
-.about-intro { padding: 88px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-.about-intro-img { border-radius: 2px; overflow: hidden; height: 480px; }
-.about-intro-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-
+ 
+/* FOUNDER */
+.founder-section { background: var(--green-pale); padding: 88px; display: grid; grid-template-columns: 320px 1fr; gap: 72px; align-items: start; }
+.founder-photo { border-radius: 2px; overflow: hidden; position: sticky; top: 100px; }
+.founder-photo img { width: 100%; object-fit: cover; object-position: top; border-radius: 2px; }
+.founder-name { font-family: var(--font-serif); font-size: 48px; font-weight: 300; color: var(--green-dark); margin-bottom: 4px; }
+.founder-role { font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 28px; }
+.founder-body { font-size: 15px; font-weight: 300; color: var(--text-mid); line-height: 1.9; }
+.founder-body p { margin-bottom: 18px; }
+.founder-body p:last-child { margin-bottom: 0; }
+ 
+/* VALUES */
 .values-section { background: var(--off-white); padding: 88px; }
 .values-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; margin-top: 48px; }
 .value-card {
@@ -303,71 +289,43 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(51,107,55,0.1); }
 .value-num { font-family: var(--font-serif); font-size: 48px; color: var(--green); opacity: 0.25; font-weight: 300; margin-bottom: 16px; line-height: 1; }
 .value-title { font-family: var(--font-serif); font-size: 22px; color: var(--green-dark); margin-bottom: 12px; }
 .value-text { font-size: 13px; font-weight: 300; color: var(--text-light); line-height: 1.8; }
-
+ 
 /* TEAM */
 .team-section { padding: 88px; }
 .team-intro { max-width: 540px; margin-bottom: 56px; }
 .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
-.team-card {
-  border: 1px solid var(--border); border-radius: 2px; overflow: hidden;
-  transition: box-shadow 0.25s;
-}
+.team-card { border: 1px solid var(--border); border-radius: 2px; overflow: hidden; transition: box-shadow 0.25s; }
 .team-card:hover { box-shadow: 0 8px 32px rgba(51,107,55,0.1); }
-.team-photo {
-  height: 280px; overflow: hidden; background: var(--green-muted);
-  position: relative; display: flex; align-items: center; justify-content: center;
-}
+.team-photo { height: 280px; overflow: hidden; background: var(--green-muted); }
 .team-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
-.team-photo-placeholder {
-  font-family: var(--font-serif); font-size: 64px; font-weight: 300;
-  color: var(--green); opacity: 0.35;
-}
-.team-photo-label {
-  position: absolute; bottom: 0; left: 0; right: 0;
-  background: rgba(51,107,55,0.85); padding: 8px 16px;
-  font-size: 9px; font-weight: 500; letter-spacing: 2px;
-  text-transform: uppercase; color: rgba(255,255,255,0.7);
-}
 .team-body { padding: 22px 24px; }
 .team-name { font-family: var(--font-serif); font-size: 22px; color: var(--green-dark); margin-bottom: 4px; }
 .team-role { font-size: 9px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
 .team-bio { font-size: 13px; font-weight: 300; color: var(--text-light); line-height: 1.75; }
-
-/* FOUNDER */
-.founder-section { background: var(--green-pale); padding: 88px; display: grid; grid-template-columns: 340px 1fr; gap: 72px; align-items: start; }
-.founder-photo { border-radius: 2px; overflow: hidden; height: 420px; position: sticky; top: 100px; }
-.founder-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-.founder-text {}
-.founder-name { font-family: var(--font-serif); font-size: 48px; font-weight: 300; color: var(--green-dark); margin-bottom: 4px; }
-.founder-role { font-size: 10px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 28px; }
-.founder-body { font-size: 15px; font-weight: 300; color: var(--text-mid); line-height: 1.9; }
-.founder-body p { margin-bottom: 18px; }
-.founder-body p:last-child { margin-bottom: 0; }
-
-/* ===================== NEWS ===================== */
+ 
+/* ABOUT STORY */
+.about-story { padding: 88px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; background: var(--green-pale); }
+.about-story-img { border-radius: 2px; overflow: hidden; height: 480px; }
+.about-story-img img { width: 100%; height: 100%; object-fit: cover; }
+ 
+/* NEWS */
 .news-hero { padding: 130px 88px 60px; background: var(--green); }
 .news-hero-title { font-family: var(--font-serif); font-size: 60px; font-weight: 300; color: #fff; }
 .news-hero-sub { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.6); margin-top: 16px; max-width: 480px; line-height: 1.7; }
-
 .news-section { padding: 72px 88px; }
 .news-featured {
-  display: grid; grid-template-columns: 1.2fr 1fr; gap: 0;
-  border: 1px solid var(--border); border-radius: 2px; overflow: hidden;
-  margin-bottom: 52px;
+  display: grid; grid-template-columns: 1.2fr 1fr;
+  border: 1px solid var(--border); border-radius: 2px; overflow: hidden; margin-bottom: 52px;
 }
 .news-featured-img { height: 420px; overflow: hidden; }
 .news-featured-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
 .news-featured:hover .news-featured-img img { transform: scale(1.03); }
-.news-featured-body {
-  padding: 52px 44px; background: #fff;
-  display: flex; flex-direction: column; justify-content: center;
-}
+.news-featured-body { padding: 52px 44px; background: #fff; display: flex; flex-direction: column; justify-content: center; }
 .news-date { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: var(--text-light); font-weight: 500; margin-bottom: 10px; }
 .news-tag { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 14px; }
 .news-title { font-family: var(--font-serif); font-size: 30px; font-weight: 400; color: var(--green-dark); line-height: 1.3; margin-bottom: 18px; }
 .news-excerpt { font-size: 14px; font-weight: 300; color: var(--text-light); line-height: 1.8; margin-bottom: 28px; }
 .news-read-more { font-size: 10px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--green); border-bottom: 1.5px solid var(--gold); padding-bottom: 3px; display: inline-block; }
-
 .news-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; }
 .news-card { border: 1px solid var(--border); border-radius: 2px; overflow: hidden; background: #fff; transition: transform 0.2s, box-shadow 0.2s; }
 .news-card:hover { transform: translateY(-4px); box-shadow: 0 10px 32px rgba(51,107,55,0.08); }
@@ -377,23 +335,22 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(51,107,55,0.1); }
 .news-card-body { padding: 24px; }
 .news-card .news-title { font-size: 18px; margin-bottom: 10px; }
 .news-card .news-excerpt { font-size: 13px; margin-bottom: 18px; }
-
-/* ===================== PARTNERS ===================== */
+ 
+/* PARTNERS PAGE */
 .partners-section { padding: 100px 88px; }
 .partners-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 56px; }
-.partner-card {
-  border: 1px solid var(--border); border-radius: 2px; padding: 40px;
-  display: grid; grid-template-columns: auto 1fr; gap: 32px; align-items: start;
-  transition: box-shadow 0.2s;
-}
+.partner-card { border: 1px solid var(--border); border-radius: 2px; padding: 40px; transition: box-shadow 0.2s; }
 .partner-card:hover { box-shadow: 0 8px 32px rgba(51,107,55,0.08); }
-.partner-icon { width: 56px; height: 56px; background: var(--green-muted); border-radius: 2px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.partner-icon span { font-size: 26px; }
+.partner-logo { height: 60px; margin-bottom: 20px; }
+.partner-logo img { height: 100%; width: auto; object-fit: contain; }
 .partner-name { font-family: var(--font-serif); font-size: 24px; color: var(--green-dark); margin-bottom: 8px; }
 .partner-type { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 14px; }
 .partner-desc { font-size: 13px; font-weight: 300; color: var(--text-light); line-height: 1.8; }
-
-/* ===================== FOOTER ===================== */
+ 
+/* DIVIDER */
+.divider { height: 1px; background: var(--border); margin: 0 88px; }
+ 
+/* FOOTER */
 footer {
   background: var(--green-dark); padding: 56px 88px;
   display: grid; grid-template-columns: auto 1fr auto; gap: 48px; align-items: center;
@@ -406,42 +363,36 @@ footer {
 .footer-right { text-align: right; }
 .footer-copy { font-size: 11px; color: rgba(255,255,255,0.3); }
 .footer-tagline { font-family: var(--font-serif); font-size: 13px; font-style: italic; color: rgba(255,255,255,0.35); margin-top: 4px; }
-
-/* ===================== UTILITIES ===================== */
-.divider { height: 1px; background: var(--border); margin: 0 88px; }
-
-/* ===================== ANIMATIONS ===================== */
+ 
+/* ANIMATIONS */
 .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 </style>
 </head>
 <body>
-
+ 
 <!-- NAV -->
 <nav id="mainNav">
   <div class="nav-logo">
-    <img src="https://wealthbridgeglobal.org/media/wbgsmlogo.webp" alt="Wealth Bridge Global" onerror="this.style.opacity='0'">
+    <img src="https://wealthbridgeglobal.org/media/wbgsmlogo.webp" alt="Wealth Bridge Global">
   </div>
   <div class="nav-links">
     <a href="#" onclick="show('home')" id="nav-home" class="active">Home</a>
     <a href="#" onclick="show('about')" id="nav-about">About</a>
     <a href="#" onclick="show('partners')" id="nav-partners">Partnerships</a>
     <a href="#" onclick="show('news')" id="nav-news">News</a>
-    <a href="#" onclick="show('grants')" id="nav-grants">Grants</a>
   </div>
 </nav>
-
-<!-- ===================== HOME PAGE ===================== -->
+ 
+<!-- ===================== HOME ===================== -->
 <div class="page active" id="page-home">
-
+ 
   <div class="hero">
     <div class="hero-bg-img"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-tag">Wealth Bridge Global</div>
-      <h1 class="hero-title">
-        Financial decisions<br>start <em>before</em><br>the money does
-      </h1>
+      <h1 class="hero-title">Financial decisions<br>start <em>before</em><br>the money does</h1>
       <p class="hero-body">We explore how young people develop financial habits across cultures, and build hands-on learning experiences that help them practice the decisions that matter most before the stakes are real.</p>
       <div class="hero-btns">
         <button class="btn-solid" onclick="show('about')">Our Mission</button>
@@ -453,7 +404,7 @@ footer {
       Scroll
     </div>
   </div>
-
+ 
   <div class="stats-row">
     <div class="stat">
       <div class="stat-number">6</div>
@@ -468,20 +419,20 @@ footer {
     <div class="stat">
       <div class="stat-number">3</div>
       <div class="stat-label">Partnerships</div>
-      <div class="stat-sub">JA SoCal, Boys & Girls Club, Harvard-Westlake</div>
+      <div class="stat-sub">JA SoCal, Boys and Girls Club, Harvard-Westlake</div>
     </div>
   </div>
-
+ 
   <div class="mission-section fade-in">
     <div class="mission-images">
       <div class="mission-img-tall">
-        <img src="https://wealthbridgeglobal.org/media/attachment-1-586x925.webp" alt="Student">
+        <img src="hero.png" alt="Lauren teaching students">
       </div>
       <div class="mission-img-sm">
         <img src="https://wealthbridgeglobal.org/media/ja-socal-907x783.webp" alt="JA SoCal">
       </div>
       <div class="mission-img-sm">
-        <img src="https://wealthbridgeglobal.org/media/img-1195-1-586x759.webp" alt="Costa Rica Research">
+        <img src="https://wealthbridgeglobal.org/media/attachment-1-586x925.webp" alt="Student">
       </div>
     </div>
     <div class="mission-text">
@@ -495,7 +446,7 @@ footer {
       <a href="#" onclick="show('about')" class="text-link">Learn More &rarr;</a>
     </div>
   </div>
-
+ 
   <div class="cards-section fade-in">
     <div class="cards-header">
       <div>
@@ -507,7 +458,7 @@ footer {
     <div class="cards-grid">
       <div class="card">
         <div class="card-img">
-          <img src="https://wealthbridgeglobal.org/media/attachment-1-586x925.webp" alt="Decision Labs" style="height:260px">
+          <img src="hero.png" alt="Decision Labs" style="height:260px">
         </div>
         <div class="card-body">
           <div class="card-tag">Decision Labs</div>
@@ -540,7 +491,7 @@ footer {
       </div>
     </div>
   </div>
-
+ 
   <div class="programs-section fade-in">
     <div class="programs-img-stack">
       <div class="programs-img-main">
@@ -570,7 +521,26 @@ footer {
       </div>
     </div>
   </div>
-
+ 
+  <!-- PARTNER LOGOS -->
+  <div class="partners-logos-section fade-in">
+    <div class="eyebrow" style="justify-content:center">Our Partners</div>
+    <div class="logos-row">
+      <div class="logo-item">
+        <img src="https://wealthbridgeglobal.org/media/wbgsmlogo.webp" alt="Wealth Bridge Global">
+        <div class="logo-label">Wealth Bridge Global</div>
+      </div>
+      <div class="logo-item">
+        <img src="https://www.jasocal.org/wp-content/themes/ja-socal/images/ja-socal-logo.png" alt="Junior Achievement SoCal" onerror="this.src='https://www.juniorachievement.org/documents/20009/20752/JA+Logo+RGB.png'">
+        <div class="logo-label">Junior Achievement SoCal</div>
+      </div>
+      <div class="logo-item">
+        <img src="https://www.bgca.org/globalassets/logos/bgca-logo.svg" alt="Boys and Girls Club" onerror="this.src='https://upload.wikimedia.org/wikipedia/en/thumb/1/1e/Boys_%26_Girls_Clubs_of_America_logo.svg/1200px-Boys_%26_Girls_Clubs_of_America_logo.svg.png'">
+        <div class="logo-label">Boys and Girls Club</div>
+      </div>
+    </div>
+  </div>
+ 
   <div class="quote-banner fade-in">
     <div class="quote-text">"The wealth gap does not start with income. <span>It starts with decisions.</span>"</div>
     <div class="quote-attr">
@@ -578,10 +548,10 @@ footer {
       <div class="quote-source">Founder, Wealth Bridge Global</div>
     </div>
   </div>
-
+ 
   <div class="expansion-section fade-in">
     <div class="expansion-number">100</div>
-    <div class="expansion-content">
+    <div>
       <div class="eyebrow">Expansion</div>
       <h2 class="section-heading" style="font-size:36px">Where we are headed in the next year</h2>
       <div class="expansion-items">
@@ -598,23 +568,20 @@ footer {
           <div class="expansion-item-text">Decision Lab modules fully prototyped and tested with real students</div>
         </div>
         <div class="expansion-item">
-          <div class="expansion-item-num">1</div>
-          <div class="expansion-item-text">Conrad Challenge submission with behavioral outcome data behind it</div>
+          <div class="expansion-item-num">3</div>
+          <div class="expansion-item-text">Community partnerships actively bringing this work into underserved schools</div>
         </div>
       </div>
     </div>
   </div>
-
+ 
   <footer>
-    <div class="footer-logo">
-      <img src="https://wealthbridgeglobal.org/media/wbgsmlogo.webp" alt="Wealth Bridge Global">
-    </div>
+    <div class="footer-logo"><img src="https://wealthbridgeglobal.org/media/wbgsmlogo.webp" alt="Wealth Bridge Global"></div>
     <div class="footer-nav">
       <a href="#" onclick="show('home')">Home</a>
       <a href="#" onclick="show('about')">About</a>
       <a href="#" onclick="show('partners')">Partnerships</a>
       <a href="#" onclick="show('news')">News</a>
-      <a href="#" onclick="show('grants')">Grants</a>
     </div>
     <div class="footer-right">
       <div class="footer-copy">&copy;2026 Wealth Bridge Global</div>
@@ -622,37 +589,33 @@ footer {
     </div>
   </footer>
 </div>
-
-<!-- ===================== ABOUT PAGE ===================== -->
+ 
+<!-- ===================== ABOUT ===================== -->
 <div class="page" id="page-about">
-
+ 
   <div class="page-banner">
     <div class="page-banner-decor">About</div>
     <div class="page-banner-eyebrow">About Us</div>
     <h1 class="page-banner-title">We are rethinking how financial literacy is <em>taught</em></h1>
   </div>
-
-  <!-- FOUNDER -->
+ 
   <div class="founder-section fade-in">
     <div class="founder-photo">
-      <!-- REPLACE src BELOW WITH LAUREN'S PHOTO -->
-      <img src="https://wealthbridgeglobal.org/media/attachment-1-1-586x925.webp" alt="Lauren Kvamme" id="founder-img">
+      <img src="lauren.jpeg" alt="Lauren Kvamme">
     </div>
-    <div class="founder-text">
+    <div>
       <div class="founder-name">Lauren Kvamme</div>
       <div class="founder-role">Founder and Executive Director</div>
       <div class="founder-body">
-        <p>Lauren Kvamme is a junior at Harvard-Westlake School and the founder of Wealth Bridge Global, a behavioral finance education initiative she started through Junior Achievement SoCal after noticing something that most financial education programs miss: students were not struggling because they lacked information. They were struggling because they had never practiced making real decisions under real conditions.</p>
+        <p>Lauren Kvamme attends Harvard-Westlake School and is the founder of Wealth Bridge Global, a behavioral finance education initiative she started after partnering with Junior Achievement SoCal. She noticed that most financial education programs miss that students are not struggling because they lack information. They struggle because they had never practiced making real decisions under real conditions.</p>
         <p>Over spring break 2026, Lauren conducted comparative research in Costa Rica, studying how different payment systems and financial environments shape the money habits young people form early in life. That research became the behavioral foundation for Wealth Bridge Decision Labs, four hands-on modules now in development through Harvard-Westlake's Forge program.</p>
-        <p>Lauren has met with advisors at Goldman Sachs, connected with researchers at UCLA and beyond, and has been selected for Harvard-Westlake's competitive Forge program to develop and test Wealth Bridge Decision Labs this summer. She is pursuing the Conrad Challenge as the next milestone for the initiative.</p>
-        <p>Outside of Wealth Bridge, Lauren is passionate about economics, behavioral science, and building things that actually change how people think and act, not just what they know.</p>
+        <p>Lauren has met with advisors at Goldman Sachs and Delta as well as connected with researchers at UCLA. Outside of Wealth Bridge, Lauren is passionate about economics, behavioral science, and building things that actually change how people think and act, not just what they know.</p>
       </div>
     </div>
   </div>
-
+ 
   <div class="divider"></div>
-
-  <!-- VALUES -->
+ 
   <div class="values-section fade-in">
     <div class="eyebrow">What We Believe</div>
     <h2 class="section-heading" style="font-size:40px">Three principles behind everything we build</h2>
@@ -674,8 +637,7 @@ footer {
       </div>
     </div>
   </div>
-
-  <!-- TEAM -->
+ 
   <div class="team-section fade-in">
     <div class="team-intro">
       <div class="eyebrow">Our Team</div>
@@ -683,87 +645,67 @@ footer {
       <p style="font-size:14px;font-weight:300;color:var(--text-light);line-height:1.8">Wealth Bridge is built by students, for students. Every person on this team teaches, researches, and builds alongside each other.</p>
     </div>
     <div class="team-grid">
-
-      <!-- SOPHIA -->
+ 
       <div class="team-card">
         <div class="team-photo">
-          <!-- TO UPDATE: replace the src below with Sophia's school photo -->
-          <img src="" alt="Sophia Hemideh" id="photo-sophia" onerror="this.style.display='none'">
-          <div class="team-photo-placeholder" id="placeholder-sophia">S</div>
-          <div class="team-photo-label">Click to update photo</div>
-        </div>
-        <div class="team-body">
-          <div class="team-name">Sophia Hemideh</div>
-          <div class="team-role">Decision Labs Co-Developer</div>
-          <div class="team-bio">Sophia is a junior at Harvard-Westlake and a core member of the Forge team. She leads curriculum design and field testing for Wealth Bridge Decision Labs, bringing a sharp student-first perspective to every module the team builds.</div>
-        </div>
-      </div>
-
-      <!-- ARCHER -->
-      <div class="team-card">
-        <div class="team-photo">
-          <!-- TO UPDATE: replace the src below with Archer's school photo -->
-          <img src="" alt="Archer Aguilar" id="photo-archer" onerror="this.style.display='none'">
-          <div class="team-photo-placeholder" id="placeholder-archer">A</div>
-          <div class="team-photo-label">Click to update photo</div>
+          <img src="archer.jpeg" alt="Archer Aguilar">
         </div>
         <div class="team-body">
           <div class="team-name">Archer Aguilar</div>
-          <div class="team-role">Decision Labs Co-Developer</div>
-          <div class="team-bio">Archer is a junior at Harvard-Westlake and co-building the four Wealth Bridge Decision Lab modules for pilot testing summer 2026. He focuses on simulation design, interactive tools, and making behavioral concepts feel real to middle school students.</div>
+          <div class="team-role">Director of Expansion</div>
+          <div class="team-bio">Archer leads expansion strategy for Wealth Bridge, working to grow the program's reach across new schools and communities. He brings focus and drive to every new opportunity the team pursues.</div>
         </div>
       </div>
-
-      <!-- ELLE -->
+ 
       <div class="team-card">
         <div class="team-photo">
-          <!-- TO UPDATE: replace the src below with Elle's school photo -->
-          <img src="" alt="Elle Davis" id="photo-elle" onerror="this.style.display='none'">
-          <div class="team-photo-placeholder" id="placeholder-elle">E</div>
-          <div class="team-photo-label">Click to update photo</div>
+          <img src="sophia.jpeg" alt="Sophia Hemideh">
         </div>
         <div class="team-body">
-          <div class="team-name">Elle Davis</div>
-          <div class="team-role">Student Leader</div>
-          <div class="team-bio">Elle is a trained student leader with Wealth Bridge, delivering weekly financial literacy lessons through Junior Achievement SoCal. She brings energy and warmth to every session, making complex financial concepts accessible for younger students.</div>
+          <div class="team-name">Sophia Hemideh</div>
+          <div class="team-role">Site Director of Burbank</div>
+          <div class="team-bio">Sophia oversees Wealth Bridge programming at the Burbank site, managing operations, student relationships, and the day-to-day experience that makes each session work.</div>
         </div>
       </div>
-
-      <!-- ISAAC -->
+ 
       <div class="team-card">
         <div class="team-photo">
-          <!-- TO UPDATE: replace the src below with Isaac's school photo -->
-          <img src="" alt="Isaac Fujikawa" id="photo-isaac" onerror="this.style.display='none'">
-          <div class="team-photo-placeholder" id="placeholder-isaac">I</div>
-          <div class="team-photo-label">Click to update photo</div>
+          <img src="isaac.jpeg" alt="Isaac Fujikawa">
         </div>
         <div class="team-body">
           <div class="team-name">Isaac Fujikawa</div>
-          <div class="team-role">Student Leader</div>
-          <div class="team-bio">Isaac is a trained student leader and teacher with Wealth Bridge, running weekly sessions through Junior Achievement SoCal. His ability to connect with students and make financial concepts feel relevant is a core part of what makes the program work.</div>
+          <div class="team-role">Operations Founder</div>
+          <div class="team-bio">Isaac built the operational foundation that keeps Wealth Bridge running smoothly. From logistics to coordination, he makes sure every session happens the way it is supposed to.</div>
         </div>
       </div>
-
-      <!-- DYLAN -->
+ 
       <div class="team-card">
         <div class="team-photo">
-          <!-- TO UPDATE: replace the src below with Dylan's school photo -->
-          <img src="" alt="Dylan Kaw" id="photo-dylan" onerror="this.style.display='none'">
-          <div class="team-photo-placeholder" id="placeholder-dylan">D</div>
-          <div class="team-photo-label">Click to update photo</div>
+          <img src="dylan.jpeg" alt="Dylan Kaw">
         </div>
         <div class="team-body">
           <div class="team-name">Dylan Kaw</div>
-          <div class="team-role">Student Leader</div>
-          <div class="team-bio">Dylan is a trained Wealth Bridge student leader delivering weekly lessons through Junior Achievement SoCal. He is a natural facilitator with a talent for keeping students engaged and making every session feel less like a class and more like a conversation.</div>
+          <div class="team-role">Community and Recruitment Founder</div>
+          <div class="team-bio">Dylan connects Wealth Bridge to the communities it serves and recruits the student leaders who power the program. He has a natural ability to get people excited about what we are building.</div>
         </div>
       </div>
-
+ 
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="elle.jpeg" alt="Elle Davis">
+        </div>
+        <div class="team-body">
+          <div class="team-name">Elle Davis</div>
+          <div class="team-role">Curriculum and Teaching Founder</div>
+          <div class="team-bio">Elle designed the teaching framework that Wealth Bridge student leaders use in every session. She brings warmth, clarity, and a deep belief that every student deserves a real financial education.</div>
+        </div>
+      </div>
+ 
     </div>
   </div>
-
-  <div class="about-intro fade-in" style="background:var(--green-pale)">
-    <div class="about-intro-img">
+ 
+  <div class="about-story fade-in">
+    <div class="about-story-img">
       <img src="https://wealthbridgeglobal.org/media/ja-socal-907x783.webp" alt="JA SoCal classroom">
     </div>
     <div>
@@ -776,7 +718,7 @@ footer {
       <a href="#" onclick="show('partners')" class="text-link">See Our Programs &rarr;</a>
     </div>
   </div>
-
+ 
   <footer>
     <div class="footer-logo"><img src="https://wealthbridgeglobal.org/media/wbgsmlogo.webp" alt="Wealth Bridge Global"></div>
     <div class="footer-nav">
@@ -784,7 +726,6 @@ footer {
       <a href="#" onclick="show('about')">About</a>
       <a href="#" onclick="show('partners')">Partnerships</a>
       <a href="#" onclick="show('news')">News</a>
-      <a href="#" onclick="show('grants')">Grants</a>
     </div>
     <div class="footer-right">
       <div class="footer-copy">&copy;2026 Wealth Bridge Global</div>
@@ -792,16 +733,16 @@ footer {
     </div>
   </footer>
 </div>
-
-<!-- ===================== NEWS PAGE ===================== -->
+ 
+<!-- ===================== NEWS ===================== -->
 <div class="page" id="page-news">
-
+ 
   <div class="news-hero">
     <div class="page-banner-eyebrow" style="color:var(--gold-light)">News and Updates</div>
     <h1 class="news-hero-title">What's happening at Wealth Bridge Global</h1>
     <p class="news-hero-sub">Updates on our programs, research, partnerships, and the students we work with.</p>
   </div>
-
+ 
   <div class="news-section">
     <div class="news-featured fade-in">
       <div class="news-featured-img">
@@ -811,11 +752,11 @@ footer {
         <div class="news-tag">Featured</div>
         <div class="news-date">June 2026</div>
         <h2 class="news-title">Wealth Bridge Decision Labs selected for Harvard-Westlake Forge Program</h2>
-        <p class="news-excerpt">This summer, our team of three is developing four hands-on behavioral finance modules through Harvard-Westlake's competitive Forge program. The Decision Labs use real spending scenarios to help students experience the forces that shape financial choices, before the stakes are real.</p>
+        <p class="news-excerpt">This summer, our team is developing four hands-on behavioral finance modules through Harvard-Westlake's competitive Forge program. The Decision Labs use real spending scenarios to help students experience the forces that shape financial choices, before the stakes are real.</p>
         <a href="#" class="news-read-more">Read More &rarr;</a>
       </div>
     </div>
-
+ 
     <div class="news-grid fade-in">
       <div class="news-card">
         <div class="news-card-img">
@@ -829,7 +770,7 @@ footer {
           <a href="#" class="news-read-more">Read More &rarr;</a>
         </div>
       </div>
-
+ 
       <div class="news-card">
         <div class="news-card-img">
           <img src="https://wealthbridgeglobal.org/media/ja-socal-907x783.webp" alt="Boys and Girls Club">
@@ -842,7 +783,7 @@ footer {
           <a href="#" class="news-read-more">Read More &rarr;</a>
         </div>
       </div>
-
+ 
       <div class="news-card">
         <div class="news-card-img">
           <img src="https://wealthbridgeglobal.org/media/ai-image-1776960737623.webp" alt="Behavioral Science">
@@ -855,10 +796,10 @@ footer {
           <a href="#" class="news-read-more">Read More &rarr;</a>
         </div>
       </div>
-
+ 
       <div class="news-card">
         <div class="news-card-img">
-          <img src="https://wealthbridgeglobal.org/media/attachment-1-586x925.webp" alt="Goldman Sachs">
+          <img src="hero.png" alt="Goldman Sachs">
         </div>
         <div class="news-card-body">
           <div class="news-tag">Program Update</div>
@@ -868,7 +809,7 @@ footer {
           <a href="#" class="news-read-more">Read More &rarr;</a>
         </div>
       </div>
-
+ 
       <div class="news-card">
         <div class="news-card-img">
           <img src="https://wealthbridgeglobal.org/media/20260413-171342-1-427x427.webp" alt="Student Leaders">
@@ -881,10 +822,10 @@ footer {
           <a href="#" class="news-read-more">Read More &rarr;</a>
         </div>
       </div>
-
+ 
       <div class="news-card">
         <div class="news-card-img">
-          <img src="https://wealthbridgeglobal.org/media/jasocal-587x394.webp" alt="JA SoCal Speaker">
+          <img src="https://wealthbridgeglobal.org/media/jasocal-587x394.webp" alt="Speaking">
         </div>
         <div class="news-card-body">
           <div class="news-tag">Speaking</div>
@@ -896,7 +837,7 @@ footer {
       </div>
     </div>
   </div>
-
+ 
   <footer>
     <div class="footer-logo"><img src="https://wealthbridgeglobal.org/media/wbgsmlogo.webp" alt="Wealth Bridge Global"></div>
     <div class="footer-nav">
@@ -904,7 +845,6 @@ footer {
       <a href="#" onclick="show('about')">About</a>
       <a href="#" onclick="show('partners')">Partnerships</a>
       <a href="#" onclick="show('news')">News</a>
-      <a href="#" onclick="show('grants')">Grants</a>
     </div>
     <div class="footer-right">
       <div class="footer-copy">&copy;2026 Wealth Bridge Global</div>
@@ -912,55 +852,55 @@ footer {
     </div>
   </footer>
 </div>
-
-<!-- ===================== PARTNERS PAGE ===================== -->
+ 
+<!-- ===================== PARTNERS ===================== -->
 <div class="page" id="page-partners">
-
+ 
   <div class="page-banner">
     <div class="page-banner-decor">Partners</div>
     <div class="page-banner-eyebrow">Community Partnerships</div>
     <h1 class="page-banner-title">Where we teach and <em>who we work with</em></h1>
   </div>
-
+ 
   <div class="partners-section fade-in">
     <div class="eyebrow">Our Partnerships</div>
     <h2 class="section-heading" style="font-size:40px;margin-bottom:0">Three organizations, one mission</h2>
     <div class="partners-grid">
       <div class="partner-card">
-        <div class="partner-icon"><span>🏆</span></div>
-        <div>
-          <div class="partner-type">Founding Partnership</div>
-          <div class="partner-name">Junior Achievement SoCal</div>
-          <div class="partner-desc">Our foundational partnership. Wealth Bridge student leaders deliver weekly financial literacy lessons to middle school students across Southern California through JA's established network. JA provides curriculum infrastructure, school access, and institutional credibility that lets our team focus on building better experiences inside the classroom.</div>
+        <div class="partner-logo">
+          <img src="https://wealthbridgeglobal.org/media/wbgsmlogo.webp" alt="Wealth Bridge Global">
         </div>
+        <div class="partner-type">Core Program</div>
+        <div class="partner-name">Wealth Bridge Decision Labs</div>
+        <div class="partner-desc">Four hands-on behavioral finance modules developed through Harvard-Westlake's Forge program. Students do not sit and learn about financial concepts, they make decisions under real conditions and examine why they decided the way they did. Launching summer 2026.</div>
       </div>
       <div class="partner-card">
-        <div class="partner-icon"><span>🌱</span></div>
-        <div>
-          <div class="partner-type">Community Partnership</div>
-          <div class="partner-name">Boys and Girls Club</div>
-          <div class="partner-desc">Beginning summer 2026 at the Stevenson site, Wealth Bridge is expanding into the Boys and Girls Club network to reach students from underserved communities who have the most to gain from early behavioral financial education. One week of training followed by five consecutive weeks of hands-on Decision Lab programming.</div>
+        <div class="partner-logo">
+          <img src="https://www.juniorachievement.org/documents/20009/20752/JA+Logo+RGB.png" alt="Junior Achievement SoCal" onerror="this.style.display='none'">
         </div>
+        <div class="partner-type">Founding Partnership</div>
+        <div class="partner-name">Junior Achievement SoCal</div>
+        <div class="partner-desc">Our foundational partnership. Wealth Bridge student leaders deliver weekly financial literacy lessons to middle school students across Southern California through JA's established network. JA provides curriculum infrastructure, school access, and institutional credibility.</div>
       </div>
       <div class="partner-card">
-        <div class="partner-icon"><span>🔬</span></div>
-        <div>
-          <div class="partner-type">Academic Partnership</div>
-          <div class="partner-name">Harvard-Westlake Forge</div>
-          <div class="partner-desc">Forge is Harvard-Westlake's competitive summer entrepreneurship program, and the home of Wealth Bridge Decision Labs. Over five days in June 2026, our three-person team will prototype, test, and refine four behavioral finance modules with real student participants. Forge provides mentorship, expert feedback, and a structured environment to make serious progress fast.</div>
+        <div class="partner-logo">
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1e/Boys_%26_Girls_Clubs_of_America_logo.svg/1200px-Boys_%26_Girls_Clubs_of_America_logo.svg.png" alt="Boys and Girls Club" onerror="this.style.display='none'">
         </div>
+        <div class="partner-type">Community Partnership</div>
+        <div class="partner-name">Boys and Girls Club</div>
+        <div class="partner-desc">Beginning summer 2026 at the Stevenson site, Wealth Bridge is expanding into the Boys and Girls Club network to reach students from underserved communities. One week of training followed by five consecutive weeks of hands-on Decision Lab programming.</div>
       </div>
       <div class="partner-card">
-        <div class="partner-icon"><span>🎯</span></div>
-        <div>
-          <div class="partner-type">Target Partnership</div>
-          <div class="partner-name">Junior Achievement USA, National</div>
-          <div class="partner-desc">After Forge, the goal is to bring Wealth Bridge Decision Labs to Junior Achievement's national network as a behavioral complement to their existing financial literacy curriculum. JA teaches concepts. Wealth Bridge teaches behavior. The two are not competing, they are the missing layers of each other.</div>
+        <div class="partner-logo" style="height:40px;display:flex;align-items:center">
+          <span style="font-family:var(--font-serif);font-size:22px;color:var(--green-dark);font-weight:600">Junior Achievement USA</span>
         </div>
+        <div class="partner-type">Target Partnership</div>
+        <div class="partner-name">Junior Achievement, National</div>
+        <div class="partner-desc">After Forge, the goal is to bring Wealth Bridge Decision Labs to Junior Achievement's national network as a behavioral complement to their existing financial literacy curriculum. JA teaches concepts. Wealth Bridge teaches behavior. The two are not competing, they are the missing layers of each other.</div>
       </div>
     </div>
   </div>
-
+ 
   <div class="mission-section fade-in" style="background:var(--green-pale)">
     <div>
       <div class="eyebrow">Decision Labs</div>
@@ -993,7 +933,7 @@ footer {
       </div>
     </div>
   </div>
-
+ 
   <footer>
     <div class="footer-logo"><img src="https://wealthbridgeglobal.org/media/wbgsmlogo.webp" alt="Wealth Bridge Global"></div>
     <div class="footer-nav">
@@ -1001,7 +941,6 @@ footer {
       <a href="#" onclick="show('about')">About</a>
       <a href="#" onclick="show('partners')">Partnerships</a>
       <a href="#" onclick="show('news')">News</a>
-      <a href="#" onclick="show('grants')">Grants</a>
     </div>
     <div class="footer-right">
       <div class="footer-copy">&copy;2026 Wealth Bridge Global</div>
@@ -1009,72 +948,7 @@ footer {
     </div>
   </footer>
 </div>
-
-<!-- ===================== GRANTS PAGE ===================== -->
-<div class="page" id="page-grants">
-
-  <div class="page-banner">
-    <div class="page-banner-decor">Grants</div>
-    <div class="page-banner-eyebrow">Grants and Funding</div>
-    <h1 class="page-banner-title">Supporting the next generation of <em>financial educators</em></h1>
-  </div>
-
-  <div style="padding:88px;max-width:860px">
-    <div class="eyebrow fade-in">Open Grant</div>
-    <h2 class="section-heading fade-in" style="font-size:44px">Wealth Bridge Student Leader Grant</h2>
-    <div class="section-body fade-in" style="font-size:16px;max-width:660px">
-      <p>Wealth Bridge Global is committed to expanding access to behavioral financial education by supporting the student leaders who deliver it. Our grant program provides resources, training, and support for high school students who want to teach financial decision-making in their communities.</p>
-      <p>If you are a student, educator, or community organization interested in bringing Wealth Bridge programming to your community, we want to hear from you.</p>
-    </div>
-
-    <div style="margin-top:52px;display:grid;grid-template-columns:1fr 1fr;gap:24px" class="fade-in">
-      <div class="value-card">
-        <div class="value-num">Who</div>
-        <div class="value-title">Who can apply</div>
-        <div class="value-text">High school students with a demonstrated interest in financial education, community service, or behavioral science. No prior experience required, just a genuine commitment to showing up and teaching.</div>
-      </div>
-      <div class="value-card">
-        <div class="value-num">What</div>
-        <div class="value-title">What we provide</div>
-        <div class="value-text">Full training through our student leader program, curriculum materials, access to Decision Lab resources, and mentorship from the Wealth Bridge team throughout your teaching experience.</div>
-      </div>
-      <div class="value-card">
-        <div class="value-num">Where</div>
-        <div class="value-title">Where we operate</div>
-        <div class="value-text">Currently active in Southern California through Junior Achievement SoCal and the Boys and Girls Club. Expanding to additional regions as our student leader network grows.</div>
-      </div>
-      <div class="value-card">
-        <div class="value-num">How</div>
-        <div class="value-title">How to apply</div>
-        <div class="value-text">Reach out to us directly at the contact information below. Tell us who you are, where you are, and why you want to be part of Wealth Bridge. Applications are reviewed on a rolling basis.</div>
-      </div>
-    </div>
-
-    <div style="margin-top:52px;background:var(--green);border-radius:2px;padding:40px 44px;display:flex;align-items:center;justify-content:space-between;gap:32px" class="fade-in">
-      <div>
-        <div style="font-family:var(--font-serif);font-size:28px;color:#fff;margin-bottom:8px">Ready to apply?</div>
-        <div style="font-size:14px;font-weight:300;color:rgba(255,255,255,0.65)">Reach out and tell us about yourself. We respond to every message.</div>
-      </div>
-      <a href="mailto:info@wealthbridgeglobal.org" style="background:var(--gold);color:#fff;padding:14px 28px;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;border-radius:1px;white-space:nowrap;flex-shrink:0">Get in Touch</a>
-    </div>
-  </div>
-
-  <footer>
-    <div class="footer-logo"><img src="https://wealthbridgeglobal.org/media/wbgsmlogo.webp" alt="Wealth Bridge Global"></div>
-    <div class="footer-nav">
-      <a href="#" onclick="show('home')">Home</a>
-      <a href="#" onclick="show('about')">About</a>
-      <a href="#" onclick="show('partners')">Partnerships</a>
-      <a href="#" onclick="show('news')">News</a>
-      <a href="#" onclick="show('grants')">Grants</a>
-    </div>
-    <div class="footer-right">
-      <div class="footer-copy">&copy;2026 Wealth Bridge Global</div>
-      <div class="footer-tagline">Because the wealth gap starts with decisions</div>
-    </div>
-  </footer>
-</div>
-
+ 
 <script>
 function show(page) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -1085,11 +959,9 @@ function show(page) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
   observeFades();
 }
-
 window.addEventListener('scroll', () => {
   document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 40);
 });
-
 function observeFades() {
   const els = document.querySelectorAll('.page.active .fade-in');
   const obs = new IntersectionObserver((entries) => {
