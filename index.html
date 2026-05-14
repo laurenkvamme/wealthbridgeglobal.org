@@ -331,8 +331,8 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(51,107,55,0.1); }
 .news-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; }
 .news-card { border: 1px solid var(--border); border-radius: 2px; overflow: hidden; background: #fff; transition: transform 0.2s, box-shadow 0.2s; }
 .news-card:hover { transform: translateY(-4px); box-shadow: 0 10px 32px rgba(51,107,55,0.08); }
-.news-card-img { height: 200px; overflow: hidden; }
-.news-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+.news-card-img { height: 220px; overflow: hidden; }
+.news-card-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; transition: transform 0.4s; }
 .news-card:hover .news-card-img img { transform: scale(1.05); }
 .news-card-body { padding: 24px; }
 .news-card .news-title { font-size: 18px; margin-bottom: 10px; }
@@ -541,7 +541,7 @@ footer {
       <div class="program-item">
         <div class="program-num">Partnership 02</div>
         <div class="program-name">Boys and Girls Club</div>
-        <div class="program-desc">Expanding access to underserved communities throughout the year, reaching different age groups across Southern California.</div>
+        <div class="program-desc">Expanding access to under-resourced communities throughout the year, reaching different age groups across Southern California.</div>
       </div>
       <div class="program-item">
         <div class="program-num">Coming Summer 2026</div>
@@ -568,7 +568,7 @@ footer {
         <div class="logo-label">Boys and Girls Club</div>
       </div>
       <div class="logo-item">
-        <img src="hw_logo.png" alt="Harvard-Westlake School">
+        <img src="hw_logo.gif" alt="Harvard-Westlake School">
         <div class="logo-label">Harvard-Westlake School</div>
       </div>
     </div>
@@ -683,7 +683,7 @@ footer {
         </div>
         <div class="expansion-item">
           <div class="expansion-item-num">3</div>
-          <div class="expansion-item-text">Community partnerships actively bringing this work into underserved schools</div>
+          <div class="expansion-item-text">Community partnerships actively bringing this work into under-resourced schools</div>
         </div>
       </div>
     </div>
@@ -747,7 +747,7 @@ footer {
       <div class="value-card">
         <div class="value-num">03</div>
         <div class="value-title">Access over exclusivity</div>
-        <div class="value-text">The students who most need behavioral financial tools are the ones least likely to receive them. We bring this work directly into underserved communities through JA SoCal and the Boys and Girls Club.</div>
+        <div class="value-text">The students who most need behavioral financial tools are the ones least likely to receive them. We bring this work directly into under-resourced communities through JA SoCal and the Boys and Girls Club.</div>
       </div>
     </div>
   </div>
@@ -992,23 +992,32 @@ footer {
         </div>
         <div class="partner-type">Community Partnership</div>
         <div class="partner-name">Boys and Girls Club</div>
-        <div class="partner-desc">Expanding access to underserved communities throughout the year, reaching different age groups across Southern California through the Boys and Girls Club network.</div>
+        <div class="partner-desc">Expanding access to under-resourced communities throughout the year, reaching different age groups across Southern California through the Boys and Girls Club network.</div>
       </div>
       <div class="partner-card">
         <div class="partner-logo">
-          <img src="hw_logo.png" alt="Harvard-Westlake School">
+          <img src="hw_logo.gif" alt="Harvard-Westlake School">
         </div>
         <div class="partner-type">Academic Partnership</div>
         <div class="partner-name">Harvard-Westlake School</div>
-        <div class="partner-desc">Through Harvard-Westlake's Forge program, Wealth Bridge is developing four behavioral Decision Lab modules this summer. Forge provides the mentorship, expert access, and structured environment to turn an idea into a real, tested product.</div>
+        <div class="partner-desc">Through Harvard-Westlake's Forge program, Wealth Bridge is developing four behavioral Decision Lab modules this summer. Every student on the Wealth Bridge team attends Harvard-Westlake, and Forge is what made this level of development possible — providing the mentorship, expert access, and structured environment to turn an idea into a real, tested product.</div>
       </div>
-        <div class="partner-name">Junior Achievement, National</div>
-        <div class="partner-desc">After Forge, the goal is to bring Wealth Bridge Decision Labs to Junior Achievement's national network as a behavioral complement to their existing financial literacy curriculum. JA teaches concepts. Wealth Bridge teaches behavior. The two are not competing, they are the missing layers of each other.</div>
+      <div class="partner-card" style="grid-column:1/-1;background:var(--green-dark);border-color:var(--green-dark)">
+        <div style="display:grid;grid-template-columns:120px 1fr;gap:40px;align-items:center">
+          <div>
+            <img src="ja_usa.png" alt="Junior Achievement USA" style="height:60px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.85">
+          </div>
+          <div>
+            <div style="font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-light);font-weight:600;margin-bottom:8px">Target Partnership</div>
+            <div style="font-family:var(--font-serif);font-size:26px;color:#fff;margin-bottom:12px">Junior Achievement, National</div>
+            <div style="font-size:14px;font-weight:300;color:rgba(255,255,255,0.7);line-height:1.8">After Forge, the goal is to bring Wealth Bridge Decision Labs to Junior Achievement's national network as a behavioral complement to their existing financial literacy curriculum. JA teaches concepts. Wealth Bridge teaches behavior. The two are not competing — they are the missing layers of each other.</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="mission-section fade-in" style="background:var(--green-pale)">
+  <div style="background:var(--green-pale);padding:80px 88px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center" class="fade-in">
     <div>
       <div class="eyebrow">Decision Labs</div>
       <h2 class="section-heading" style="font-size:38px">How we teach</h2>
@@ -1016,13 +1025,13 @@ footer {
         <p>Students do not sit and learn about financial concepts, they make decisions under real conditions and examine why they decided the way they did.</p>
       </div>
       <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:32px">
-        <img src="ja_socal.png" alt="Junior Achievement SoCal" style="height:52px;width:auto;object-fit:contain">
-        <img src="bgc.jpg" alt="Boys and Girls Club" style="height:52px;width:auto;object-fit:contain">
-        <img src="ja_usa.png" alt="Junior Achievement USA" style="height:52px;width:auto;object-fit:contain">
+        <img src="ja_socal.png" alt="Junior Achievement SoCal" style="height:48px;width:auto;object-fit:contain">
+        <img src="bgc.jpg" alt="Boys and Girls Club" style="height:48px;width:auto;object-fit:contain">
+        <img src="ja_usa.png" alt="Junior Achievement USA" style="height:48px;width:auto;object-fit:contain">
       </div>
     </div>
     <div>
-      <img src="hero.png" alt="Students learning" style="width:100%;border-radius:2px;object-fit:cover;height:360px">
+      <img src="hero.png" alt="Students learning" style="width:100%;border-radius:2px;object-fit:cover;height:340px">
     </div>
   </div>
 
