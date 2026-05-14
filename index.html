@@ -799,7 +799,7 @@ footer {
 
       <div class="team-card">
         <div class="team-photo">
-          <img src="dylan.jpeg" alt="Dylan Kaw">
+          <img src="dylan.jpeg" alt="Dylan Kaw" style="object-position:center 10%">
         </div>
         <div class="team-body">
           <div class="team-name">Dylan Kaw</div>
@@ -810,7 +810,7 @@ footer {
 
       <div class="team-card">
         <div class="team-photo">
-          <img src="elle.jpeg" alt="Elle Davis">
+          <img src="elle.jpeg" alt="Elle Davis" style="object-position:center 10%">
         </div>
         <div class="team-body">
           <div class="team-name">Elle Davis</div>
@@ -875,31 +875,6 @@ footer {
     </div>
 
     <div class="news-grid fade-in">
-      <div class="news-card">
-        <div class="news-card-img">
-          <img src="https://wealthbridgeglobal.org/media/img-1195-1-586x759.webp" alt="Costa Rica">
-        </div>
-        <div class="news-card-body">
-          <div class="news-tag">Research</div>
-          <div class="news-date">March 2026</div>
-          <h3 class="news-title">Comparative research in Costa Rica on payment systems and financial behavior</h3>
-          <p class="news-excerpt">How do different financial environments shape the money habits young people form? Founder Lauren Kvamme spent spring break conducting fieldwork in Costa Rica to find out.</p>
-          <a href="#" onclick="openModal('costarica')" class="news-read-more">Read More &rarr;</a>
-        </div>
-      </div>
-
-      <div class="news-card">
-        <div class="news-card-img">
-          <img src="https://wealthbridgeglobal.org/media/ai-image-1776960737623.webp" alt="Behavioral Science">
-        </div>
-        <div class="news-card-body">
-          <div class="news-tag">Behavioral Science</div>
-          <div class="news-date">December 2025</div>
-          <h3 class="news-title">Why we build around behavioral science, not traditional financial literacy</h3>
-          <p class="news-excerpt">The Stanford Marshmallow Experiment, MIT's pain of paying research, and Kahneman's work on present bias all point to the same conclusion: the gap is not knowledge, it is behavior.</p>
-          <a href="#" onclick="openModal('behavioral')" class="news-read-more">Read More &rarr;</a>
-        </div>
-      </div>
 
       <div class="news-card">
         <div class="news-card-img">
@@ -911,6 +886,32 @@ footer {
           <h3 class="news-title">Meeting with Goldman Sachs, financial literacy is a behavior problem not a knowledge problem</h3>
           <p class="news-excerpt">A conversation with senior leadership at Goldman Sachs confirmed what our research had been pointing to, and directly shaped the design philosophy behind Wealth Bridge Decision Labs.</p>
           <a href="#" onclick="openModal('goldman')" class="news-read-more">Read More &rarr;</a>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <div class="news-card-img">
+          <img src="https://wealthbridgeglobal.org/media/jasocal-587x394.webp" alt="Speaking">
+        </div>
+        <div class="news-card-body">
+          <div class="news-tag">Speaking</div>
+          <div class="news-date">April 2026</div>
+          <h3 class="news-title">This spring, Lauren Kvamme speaks at Junior Achievement SoCal on the importance of their work</h3>
+          <p class="news-excerpt">Lauren spoke to an audience of educators and community leaders about why Junior Achievement's mission matters and the impact their programs have on the students they serve.</p>
+          <a href="#" onclick="openModal('speaking')" class="news-read-more">Read More &rarr;</a>
+        </div>
+      </div>
+
+      <div class="news-card">
+        <div class="news-card-img">
+          <img src="costarica.jpeg" alt="Costa Rica">
+        </div>
+        <div class="news-card-body">
+          <div class="news-tag">Research</div>
+          <div class="news-date">March 2026</div>
+          <h3 class="news-title">Comparative research in Costa Rica on payment systems and financial behavior</h3>
+          <p class="news-excerpt">How do different financial environments shape the money habits young people form? Founder Lauren Kvamme spent spring break conducting fieldwork in Costa Rica to find out.</p>
+          <a href="#" onclick="openModal('costarica')" class="news-read-more">Read More &rarr;</a>
         </div>
       </div>
 
@@ -929,16 +930,17 @@ footer {
 
       <div class="news-card">
         <div class="news-card-img">
-          <img src="https://wealthbridgeglobal.org/media/jasocal-587x394.webp" alt="Speaking">
+          <img src="https://wealthbridgeglobal.org/media/ai-image-1776960737623.webp" alt="Behavioral Science">
         </div>
         <div class="news-card-body">
-          <div class="news-tag">Speaking</div>
-          <div class="news-date">April 2026</div>
-          <h3 class="news-title">This spring, Lauren Kvamme speaks at Junior Achievement SoCal on the importance of their work</h3>
-          <p class="news-excerpt">Lauren spoke to an audience of educators and community leaders about why Junior Achievement's mission matters and the impact their programs have on the students they serve.</p>
-          <a href="#" onclick="openModal('speaking')" class="news-read-more">Read More &rarr;</a>
+          <div class="news-tag">Behavioral Science</div>
+          <div class="news-date">December 2025</div>
+          <h3 class="news-title">Why we build around behavioral science, not traditional financial literacy</h3>
+          <p class="news-excerpt">The Stanford Marshmallow Experiment, MIT's pain of paying research, and Kahneman's work on present bias all point to the same conclusion: the gap is not knowledge, it is behavior.</p>
+          <a href="#" onclick="openModal('behavioral')" class="news-read-more">Read More &rarr;</a>
         </div>
       </div>
+
     </div>
   </div>
 
@@ -1081,7 +1083,7 @@ const articles = {
     tag: "Research",
     date: "March 2026",
     title: "Comparative research in Costa Rica on payment systems and financial behavior",
-    img: "https://wealthbridgeglobal.org/media/img-1195-1-586x759.webp",
+    img: "costarica.jpeg",
     body: `<p>Over spring break 2026, Wealth Bridge founder Lauren Kvamme traveled to Costa Rica to conduct comparative research on how different financial environments shape the money habits young people form early in life.</p>
     <h3>The research question</h3>
     <p>The central question was simple: do the payment systems and financial structures people grow up around change how they think about money? And if so, what does that mean for financial education?</p>
