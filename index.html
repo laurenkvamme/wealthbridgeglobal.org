@@ -60,8 +60,9 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(51,107,55,0.1); }
 .nav-links a.active::after { transform: scaleX(1); }
 
 /* PAGES */
-.page { display: none; }
-.page.active { display: block; }
+.page { display: none; margin: 0; padding: 0; }
+.page.active { display: block; margin: 0; padding: 0; }
+.page.active { display: block; margin: 0; padding: 0; }
 
 /* HERO */
 .hero {
@@ -857,7 +858,6 @@ footer {
   <div class="news-hero">
     <div class="page-banner-eyebrow" style="color:var(--gold-light)">News and Updates</div>
     <h1 class="news-hero-title">What's happening at Wealth Bridge Global</h1>
-    <p class="news-hero-sub">Updates on our programs, research, partnerships, and the students we work with.</p>
   </div>
 
   <div class="news-section">
@@ -881,23 +881,10 @@ footer {
         </div>
         <div class="news-card-body">
           <div class="news-tag">Research</div>
-          <div class="news-date">April 2026</div>
+          <div class="news-date">March 2026</div>
           <h3 class="news-title">Comparative research in Costa Rica on payment systems and financial behavior</h3>
           <p class="news-excerpt">How do different financial environments shape the money habits young people form? Founder Lauren Kvamme spent spring break conducting fieldwork in Costa Rica to find out.</p>
           <a href="#" onclick="openModal('costarica')" class="news-read-more">Read More &rarr;</a>
-        </div>
-      </div>
-
-      <div class="news-card">
-        <div class="news-card-img">
-          <img src="https://wealthbridgeglobal.org/media/ja-socal-907x783.webp" alt="Boys and Girls Club">
-        </div>
-        <div class="news-card-body">
-          <div class="news-tag">Partnerships</div>
-          <div class="news-date">March 2026</div>
-          <h3 class="news-title">Wealth Bridge expands to Boys and Girls Club for summer 2026</h3>
-          <p class="news-excerpt">Beginning this June, our team brings programming to the Boys and Girls Club Stevenson site, reaching a new group of rising 9th and 10th graders from underserved communities.</p>
-          <a href="#" onclick="openModal('bgc')" class="news-read-more">Read More &rarr;</a>
         </div>
       </div>
 
@@ -916,26 +903,26 @@ footer {
 
       <div class="news-card">
         <div class="news-card-img">
-          <img src="hero.png" alt="Goldman Sachs">
+          <img src="goldman.jpg" alt="Goldman Sachs Meeting">
         </div>
         <div class="news-card-body">
           <div class="news-tag">Program Update</div>
-          <div class="news-date">October 2025</div>
+          <div class="news-date">April 2026</div>
           <h3 class="news-title">Meeting with Goldman Sachs, financial literacy is a behavior problem not a knowledge problem</h3>
-          <p class="news-excerpt">A conversation with a Goldman Sachs advisor confirmed what our research had been pointing to, and directly shaped the design philosophy behind Wealth Bridge Decision Labs.</p>
+          <p class="news-excerpt">A conversation with senior leadership at Goldman Sachs confirmed what our research had been pointing to, and directly shaped the design philosophy behind Wealth Bridge Decision Labs.</p>
           <a href="#" onclick="openModal('goldman')" class="news-read-more">Read More &rarr;</a>
         </div>
       </div>
 
       <div class="news-card">
         <div class="news-card-img">
-          <img src="https://wealthbridgeglobal.org/media/20260413-171342-1-427x427.webp" alt="Student Leaders">
+          <img src="leaders.jpeg" alt="Student Leaders">
         </div>
         <div class="news-card-body">
           <div class="news-tag">Growth</div>
-          <div class="news-date">September 2025</div>
+          <div class="news-date">November 2025</div>
           <h3 class="news-title">Wealth Bridge launches student leader training program with Junior Achievement SoCal</h3>
-          <p class="news-excerpt">Six high school students trained to deliver weekly financial literacy lessons to middle schoolers across Southern California, building the peer-teaching model at the core of our work.</p>
+          <p class="news-excerpt">High school students trained to deliver weekly financial literacy lessons to younger students across Southern California, building the peer-teaching model at the core of our work.</p>
           <a href="#" onclick="openModal('leaders')" class="news-read-more">Read More &rarr;</a>
         </div>
       </div>
@@ -946,8 +933,8 @@ footer {
         </div>
         <div class="news-card-body">
           <div class="news-tag">Speaking</div>
-          <div class="news-date">August 2025</div>
-          <h3 class="news-title">Lauren Kvamme speaks at Junior Achievement SoCal on the importance of their work</h3>
+          <div class="news-date">April 2026</div>
+          <h3 class="news-title">This spring, Lauren Kvamme speaks at Junior Achievement SoCal on the importance of their work</h3>
           <p class="news-excerpt">Lauren spoke to an audience of educators and community leaders about why Junior Achievement's mission matters and the impact their programs have on the students they serve.</p>
           <a href="#" onclick="openModal('speaking')" class="news-read-more">Read More &rarr;</a>
         </div>
@@ -1083,7 +1070,7 @@ const articles = {
   },
   costarica: {
     tag: "Research",
-    date: "April 2026",
+    date: "March 2026",
     title: "Comparative research in Costa Rica on payment systems and financial behavior",
     img: "https://wealthbridgeglobal.org/media/img-1195-1-586x759.webp",
     body: `<p>Over spring break 2026, Wealth Bridge founder Lauren Kvamme traveled to Costa Rica to conduct comparative research on how different financial environments shape the money habits young people form early in life.</p>
@@ -1122,22 +1109,22 @@ const articles = {
   },
   goldman: {
     tag: "Program Update",
-    date: "October 2025",
+    date: "April 2026",
     title: "Meeting with Goldman Sachs: financial literacy is a behavior problem, not a knowledge problem",
-    img: "hero.png",
-    body: `<p>Earlier this year, Wealth Bridge founder Lauren Kvamme had the opportunity to meet with an advisor at Goldman Sachs to discuss the Wealth Bridge concept and get feedback on the direction of the program.</p>
+    img: "goldman.jpg",
+    body: `<p>Earlier this year, Wealth Bridge founder Lauren Kvamme had the opportunity to meet with senior leadership at Goldman Sachs to discuss the Wealth Bridge concept and get feedback on the direction of the program.</p>
     <h3>The reframe that changed everything</h3>
-    <p>The advisor's reaction was immediate. The core insight he offered: financial literacy is not a knowledge problem. People already know they should save. They know debt is expensive. They know impulse purchases are mistakes. And they still do all of it anyway. That is not a knowledge gap. It is a behavior gap. And behavior gaps require a completely different kind of intervention than information does.</p>
+    <p>His reaction was immediate. The core insight he offered: financial literacy is not a knowledge problem. People already know they should save. They know debt is expensive. They know impulse purchases are mistakes. And they still do all of it anyway. That is not a knowledge gap. It is a behavior gap. And behavior gaps require a completely different kind of intervention than information does.</p>
     <h3>Systems over advice</h3>
-    <p>One of the most concrete ideas that came out of the conversation was about friction. The advisor noted that every payment innovation in recent years has been designed to make spending easier and faster. Tap-to-pay. Saved card details. One-click checkout. Each of these removes a small moment of hesitation that used to exist naturally. His observation: what if we added that friction back in intentionally? Requiring someone to type in their card number before completing a purchase forces a pause. That pause is where the decision actually lives.</p>
+    <p>One of the most concrete ideas that came out of the conversation was about friction. Senior leadership noted that every payment innovation in recent years has been designed to make spending easier and faster. Tap-to-pay. Saved card details. One-click checkout. Each of these removes a small moment of hesitation that used to exist naturally. His observation: what if we added that friction back in intentionally? Requiring someone to type in their card number before completing a purchase forces a pause. That pause is where the decision actually lives.</p>
     <h3>How this shaped Wealth Bridge</h3>
     <p>This conversation directly influenced the design of the Cash vs. Card Decision Lab, the first of four Wealth Bridge modules. The module is built around exactly this idea: giving students a chance to experience how payment method changes spending behavior, and then asking them to think about why. The Goldman Sachs meeting confirmed that Wealth Bridge was asking the right questions. The work since then has been about finding the right answers.</p>`
   },
   leaders: {
     tag: "Growth",
-    date: "September 2025",
+    date: "November 2025",
     title: "Wealth Bridge launches student leader training program with Junior Achievement SoCal",
-    img: "https://wealthbridgeglobal.org/media/20260413-171342-1-427x427.webp",
+    img: "leaders.jpeg",
     body: `<p>This fall, Wealth Bridge Global launched its first formal student leader training program in partnership with Junior Achievement SoCal, training a cohort of high school students to deliver weekly financial literacy lessons to younger students across Southern California.</p>
     <h3>Why peer-to-peer teaching works</h3>
     <p>Research on peer learning consistently shows that students retain information better when it comes from someone closer to their own age and experience. A high schooler talking to a middle schooler about money carries a different kind of credibility than an adult in a classroom. The student leader model is built on that insight. Our leaders are not just teaching. They are modeling what it looks like to take financial decisions seriously at a young age.</p>
@@ -1148,8 +1135,8 @@ const articles = {
   },
   speaking: {
     tag: "Speaking",
-    date: "August 2025",
-    title: "Lauren Kvamme speaks at Junior Achievement SoCal on the importance of their work",
+    date: "April 2026",
+    title: "This spring, Lauren Kvamme speaks at Junior Achievement SoCal on the importance of their work",
     img: "https://wealthbridgeglobal.org/media/jasocal-587x394.webp",
     body: `<p>This summer, Wealth Bridge founder Lauren Kvamme had the opportunity to speak at a Junior Achievement SoCal event, addressing an audience of educators, community leaders, and program supporters.</p>
     <h3>What she spoke about</h3>
